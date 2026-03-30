@@ -257,6 +257,22 @@ if enable_core
             subdir: 'vapoursynth',
         )
 
+        py.extension_module('vspipe2',
+            files(
+                'src/cython/vspipe2.pyx',
+                'src/vspipe/printgraph.cpp',
+                'src/vspipe/vsjson.cpp',
+                'src/common/wave.cpp',
+            ),
+            dependencies: [py_dep, vapoursynth_dep],
+            include_directories: include_directories('src'),
+            install: true,
+            install_rpath: '$ORIGIN',
+            limited_api: '3.12',
+            override_options: 'cython_language=cpp',
+            subdir: 'vapoursynth',
+        )
+
         py.install_sources(
             files(
                 'src/py/__init__.py',

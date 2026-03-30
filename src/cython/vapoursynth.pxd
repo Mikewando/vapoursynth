@@ -196,7 +196,7 @@ cdef extern from "include/VapourSynth4.h" nogil:
         maAppend
 
     struct VSCoreInfo:
-        char *versionString
+        const char *versionString
         int core
         int api
         int numThreads
@@ -204,7 +204,7 @@ cdef extern from "include/VapourSynth4.h" nogil:
         int64_t usedFramebufferSize
         
     struct VSCoreInfo2:
-        char *versionString
+        const char *versionString
         int coreVersion
         int apiVersion
         int creationFlags

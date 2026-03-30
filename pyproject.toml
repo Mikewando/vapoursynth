@@ -41,6 +41,7 @@ Changelog = "https://github.com/vapoursynth/vapoursynth/blob/master/ChangeLog"
 [project.scripts]
 vapoursynth = "vapoursynth:vapoursynth_entrypoint"
 vspipe = "vapoursynth:vspipe"
+vspipe2 = "vapoursynth.vspipe2:main"
 
 [tool.meson-python]
 limited-api = true
